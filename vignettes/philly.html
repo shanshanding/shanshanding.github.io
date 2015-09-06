@@ -23,6 +23,17 @@
 		body {
 			padding-top: 40px; 
 		}
+		#header { 
+			position: relative;
+		}
+		#header p { 
+			position: absolute; 
+			bottom: -20px;
+		}
+		#next { 
+			left: auto; 
+			right: 0;
+		}		
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -52,10 +63,14 @@
 							
 						<!-- Vignettes -->
 							<article class="panel">
+							<div id="header" >
+							<a href="rabat.html" style="color: #777777; text-decoration: none"><p id ="previous">previous</p></a>
+							<a href="arequipa.html" style="color: #777777; text-decoration: none"><p id="next">next</p></a>
+							</div>
 							<div class="image fit"><img src="../images/philly.JPG" alt=""></div>
 							<p align="center"><br>
 							Rittenhouse Square, Philadelphia, Pennsylvania</p>
-							<p>I was walking home after a Philadelphia Orchestra concert.  The concert featured Rachmaninoff's
+							<p>I was walking home after a Philadelphia Orchestra concert.  The concert featured Rachmaninoff's lyrical
 							Rhapsody on a Theme of Paganini, a piece the composer had written with this orchestra in mind.  
 							It was a cold but clear mid-December night, and Rittenhouse Square was lit up with festive holiday lights.  
 							How did the city I couldn't wait to leave become the city I didn't want to leave?  Gradually, then suddenly.
@@ -85,7 +100,7 @@
 			<script src="../assets/js/skel.min.js"></script>
 			<script src="../assets/js/skel-viewport.min.js"></script>
 			<script src="../assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="../assets/js/main.js"></script>
 
 	</body>
