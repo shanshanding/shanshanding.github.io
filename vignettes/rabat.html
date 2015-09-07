@@ -35,6 +35,12 @@
 			left: auto; 
 			right: 47%;
 		}		
+		.mobileShow { display: none;}
+		.mobileHide { display: inline;}
+		@media only screen and (max-width: 736px){ 
+			.mobileHide { display: none;}
+			.mobileShow { display: inline;}
+		}		
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -64,11 +70,11 @@
 							
 						<!-- Vignettes -->
 							<article class="panel">
-							<div id="header" >
+							<div class="mobileHide"><div id="header" >
 							<a href="camino.html" style="color: #777777; text-decoration: none"><p id ="previous">previous</p></a>
 							<a href="../index.html" style="color: #777777; text-decoration: none"><p id="back">home</p></a>
 							<a href="philly.html" style="color: #777777; text-decoration: none"><p id="next">next</p></a>
-							</div>
+							</div></div>
 							<div class="image fit"><img src="../images/rabat.JPG" alt=""></div>
 							<p align="center"><br>
 							Woman Walking Past Mausoleum of Mohammed V, Rabat, Morocco</p>
@@ -82,7 +88,8 @@
 				<!-- Footer -->
 					<div id="footer">
 						<ul class="copyright">
-							<li><script language="JavaScript">
+							<div class="mobileShow"><li><a href="../index">Home</a></li></div>
+							<div class="mobileHide"><li><script language="JavaScript">
 								var fname = "shanshan";
 								var lname = "ding";
 								var num = "08";
