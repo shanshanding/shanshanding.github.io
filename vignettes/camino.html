@@ -36,7 +36,9 @@
 			right: 47%;
 		}	
 		.mobileShow { display: none;}
+		.mobileHide { display: inline;}
 		@media only screen and (max-width: 736px){ 
+			.mobileHide { display: none;}
 			.mobileShow { display: inline;}
 		}		
 		</style>
@@ -119,14 +121,15 @@
 					<div id="footer">
 						<div class="mobileShow"><a href="../index">Home</a></div>
 						<ul class="copyright">
-							<li><script language="JavaScript">
+							<div class="mobileShow"><li><a href="../index">Home</a></li></div>
+							<div class="mobileHide"><li><script language="JavaScript">
 								var fname = "shanshan";
 								var lname = "ding";
 								var num = "08";
 								var hostname = "gmail";
 								var username = fname + "." + lname + num;
 								document.write(username + "@" + hostname + ".com");
-								</script></li>
+								</script></li></div>
 							<li>&copy; 2015 Shanshan Ding</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</div>
