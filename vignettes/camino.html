@@ -34,6 +34,10 @@
 		#back { 
 			left: auto; 
 			right: 47%;
+		}	
+		.mobileShow { display: none;}
+		@media only screen and (max-width: 736px){ 
+			.mobileShow { display: inline;}
 		}		
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -113,6 +117,7 @@
 
 				<!-- Footer -->
 					<div id="footer">
+						<div class="mobileShow"><a href="../index">Home</a></div>
 						<ul class="copyright">
 							<li><script language="JavaScript">
 								var fname = "shanshan";
