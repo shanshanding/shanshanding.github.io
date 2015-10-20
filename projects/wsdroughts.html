@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<!--
+	Astral by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Shanshan Ding</title>
+		<link rel="shortcut icon" href="../images/favicon.ico?" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
+		
+	<!--	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+		<style>
+		h3 {
+			text-align: center;
+		} 
+		img {
+			max-width: 100%;
+		}
+		#header { 
+			position: relative;
+		}
+		#header p { 
+			position: absolute; 
+			bottom: -20px;
+		}
+		#next { 
+			left: auto; 
+			right: 0;
+		}
+		#back { 
+			left: auto; 
+			right: 47%;
+		}	
+		.mobileShow { display: none;}
+		.mobileHide { display: inline;}
+		@media only screen and (max-width: 736px){ 
+			.mobileHide { display: none;}
+			.mobileShow { display: inline;}
+		}		
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-67185739-1', 'auto');
+		ga('send', 'pageview');
+
+		</script>
+	</head>
+	<body>
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+
+				<!-- Main -->
+					<div id="main">
+						<!-- Projectss -->	
+							<article class="panel">
+							<div class="mobileHide"><div id="header" >
+							<a href="../index.html" style="color: #777777; text-decoration: none"><p id ="previous">home</p></a>
+							</div></div>
+							<h3>Why the world will not end if the Cubs win the 2015 World Series</h3>
+							<br>
+							<p>The Chicago Cubs are currently (as of October 19 2015) playing the New York Mets in the 2015 
+							National League Championship Series, potentially eight victories away from winning the World Series, 
+							something that has not happened since 1907.  As baseball lore goes, the team is cursed,
+							and a World Series victory would be an event of cosmic proportions, possibly signaling end of times itself.  
+							This begs the question: just how unlikely is an 107-year drought?<br> 	
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For simplicity, let us first assume that in any given year, 
+							each team has equal chance of winning the WS.  From the Cubs' point of view, 
+							the probability of it not winning the WS since 1907 is about 0.38%, i.e. very unlikely. 
+							However, what is the probability that <i>some</i> team hasn't won the WS since 1907? 
+							By my <a href="https://github.com/shanshanding/miscellaneous/blob/master/worldSeriesDroughts.py">
+							simulation</a>*, it is about 6%, i.e. not probable, but not impossible. 
+							This is similar to the Birthday Paradox: if you walk into a room of 30 people, the probability 
+							that someone has the same birthday as you is low (~8%), but the probability that 
+							some pair of people share the same birthday is quite high (~70%).<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While we are on the topic, the probability that at least 2 teams 
+							did not win the WS from 1919 to 2003, as was the case with the Cubs and the Red Sox, is a little over 1%. 
+							Not something anyone would have predicted in 1918, but had the two met in the 2003 WS (both teams 
+							advanced to their respective league's Championship Series that year), 
+							the world likely would not have ended either.<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We should remember though that while the Cubs and the Red Sox 
+							received all the attention, there was a third team that did not win a championship between 1919 and 2003: 
+							the Chicago White Sox, who, before winning the WS in 2005, last won in 1917.  Together this trio of futility 
+							does push the limits of incredulity, as the probability of three teams concurrently trapped in 85-year droughts
+							appears to be less than 0.04%.<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By the way, as a die-hard Cleveland Indians fan, 
+							what is the probability that, conditioning on the Cubs's drought, some other team hasn't won 
+							the WS since 1948, as is the case with the Indians? It is actually about 53%! So sure, the Indians 
+							have been very unlucky, but it's almost as if a flip of a coin decided that some team has to be that unlucky, 
+							and that team just happens to be the Indians (well, that, and decades of mismanagement).<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Before we leave this discussion, let us consider what happens to our model if, 
+							as it happens in reality, not all teams have equal chance of winning the WS.  I don't have a rigorous proof, 
+							but my hunch is that the above simulations in fact give lower bounds on what they are estimating.  
+							I think if we were to write out explicit formulas that compute these probabilities, 
+							we would see that such formulas can be optimized using Lagrange multipliers, 
+							and that by symmetry, uniform distribution on winning gives a local extremum.  The question is whether it is a max 
+							or a min.  For that we consider a non-uniform example: if a team always have zero chance of winning the WS, then 
+							it will have a drought of arbitrary length, and therefore the probability of <i>some</i> team having a drought of 
+							any length is 1.  This suggests that the probability of drought increases as distribution on winning shifts away 
+							from uniformity.<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In summary, the probability of some team not winning the World Series since 1907 is at 
+							least 6% and possibly considerably higher.  If 2015 is the year that the Cubs's drought finally ends, it would be the 
+							end of a streak that, while painful for generations of Cubs fans, is not really all that mathematically remarkable 
+							in and of itself.  However, do consider the droughts of the Red Sox (1919-2003, winning WS in 2004) and the White Sox 
+							(1918-2004, winning WS in 2005), and how neatly the Cubs winning the 2015 WS would completely the symmetry.  
+							As we speak, the Cubs are down 2 games to none to the Mets.  If they do manage to make it to the World Series 
+							and win, well, that would be of some numerological interest.
+							</p>
+							<p>*One might ask why, if we know $p$, one team's probability of not winning the WS since 1907, we cannot simply 
+							compute the probability of <i>some</i> team not winning the WS since 1907 with the formula $1-(1-p)^{\text{numTeams}}$.
+							The reason is that teams's records are not independent.  To be fair, the dependence is very weak and 
+							the aforementioned formula does yield about 6% as well.</p>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<div class="mobileShow"><li><a href="../index">Home</a></li></div>
+							<div class="mobileHide"><li><script language="JavaScript">
+								var fname = "shanshan";
+								var lname = "ding";
+								var num = "08";
+								var hostname = "gmail";
+								var username = fname + "." + lname + num;
+								document.write(username + "@" + hostname + ".com");
+								</script></li></div>
+							<li>&copy; 2015 Shanshan Ding</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/skel-viewport.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
